@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="w-full h-6 bg-red-300">
+        <h1 
+            class="text-xl  text-center -text-2xl">
+            Calculator
+        </h1>
+    </section>
+    <section class="h-auto w-auto">
+        <main class="w-96 h-auto mx-auto grid grid-row-6 grid-cols-4 gap-1 m-6">
+            <button 
+                id="display" 
+                class="bg-amber-300 p-2 col-span-2">
+                Log Area
+            </button>
+
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('compose').innerHTML.toggle('+','-');">+/-</button>
+
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '/';">/</button>
+
+            <!-- ... -->
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '7'">7</button>
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '8'">8</button>
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '9'">9</button>
+            <button class="bg-slate-300 p-2" 
+                onclick="document.getElementById('display').innerHTML = '-';">-</button>
+
+            <!-- ... -->
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '4'">4</button>
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '5'">5</button>
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '6'">6</button>
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '+';">+</button>
+            <!-- ... -->
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '1'">1</button>
+
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '2'">2</button>
+
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '3'">3</button>
+
+            <button button class="bg-slate-300 p-2"
+                onclick="document.getElementById('compose').classList.toggle('text-purple-500');">*</button>
+            <!-- ... -->
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '0'">0</button>
+
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = 'CE';">CE</button>
+
+            <button class="bg-slate-300 p-2"
+                onclick="document.getElementById('display').innerHTML = '.'">.</button>
+
+            <button class="bg-green-300 p-2"
+                onclick="document.getElementById('compose').classList.toggle('text-purple-500');">Enter</button>
+            <!-- ... -->
+        </main>
+</body>
+</html>
+
+<!--
+on click display area change innerHTML
+
+<button onclick="document.getElementById('display').innerHTML = ''">Click Me!</button>
+
+solve, display, clear screen
+-->
