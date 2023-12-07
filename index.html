@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function myClear(){
+        function clr(){
             document.getElementById('display').innerHTML = '';
         }
         function one (){
@@ -25,12 +25,27 @@
         function disp(digit) {
             document.getElementById('display').innerHTML += digit;
         }
+        
+        /*
+            x grabs the value
+            y evalutes 
+            x is the equation and y displays it to 
+            eval - evaluate solves or runs whatever code is in the background
+        */
+        function ans() {
+            let x;
+            let y;
+            x = document.getElementById('display').value;
+            y = eval(x);
+            document.getElementById('display').innerHTML += y;
+        }
+
     </script>
 </head>
-<body>
-    <section class="w-full h-6 bg-red-300">
+<body class="md:bg-green-200">
+    <section class="w-full h-6 bg-red-300 p-6">
         <h1 
-            class="text-xl  text-center -text-2xl">
+            class=" text-center text-xl">
             Calculator
         </h1>
     </section>
@@ -41,11 +56,10 @@
                 id="display" 
                 class="bg-amber-300 p-2 col-span-3">
             </button>
-
             <button class="bg-slate-300 p-2" onclick="disp('/')">/</button>
 
             <!-- ... -->
-            <button class="bg-slate-300 p-2" onclick="7">7</button>
+            <button class="bg-slate-300 p-2" onclick="disp('7')">7</button>
             <button class="bg-slate-300 p-2" onclick="disp('8')">8</button>
             <button class="bg-slate-300 p-2" onclick="disp('9')">9</button>
             <button class="bg-slate-300 p-2" onclick="disp('-')">-</button>
@@ -59,25 +73,16 @@
 
             <!-- ... -->
 
-            <button class="bg-slate-300 p-2" onclick="disp('1')">1</button>
-
+            <button class="bg-slate-300 p-2" onclick="one()">1</button>
             <button class="bg-slate-300 p-2" onclick="disp('2')">2</button>
-
             <button class="bg-slate-300 p-2" onclick="disp('3')">3</button>
-
-            <button button class="bg-slate-300 p-2" onclick="disp('*')">*</button>
+            <button class="bg-slate-300 p-2" onclick="disp('*')">*</button>
 
             <!-- ... -->
-            <button class="bg-rose-300 p-2" onclick="myClear()">CE</button>
-                
+            <button class="bg-rose-300 p-2" onclick="clr()">CE</button>
             <button class="bg-slate-300 p-2" onclick="disp('0')">0</button>
-
-
-
             <button class="bg-slate-300 p-2" onclick="disp('.')">.</button>
-
-            <button class="bg-green-300 p-2"
-                onclick="document.getElementById('display').innerHTML += '+=';">Enter</button>
+            <button class="bg-green-300 p-2" onclick="ans()">=</button>
             <!-- ... -->
         </main>
 </body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        function clr (){
+            document.getElementById('display').innerHTML = '';
+        }
+        function disp(){
+            document.getElementById('display').innerHTML += '';
+        }
+        function ans(){
+            let x = document.getElementById('display').value;
+            let y = eval(x);
+            document.getElementById('display').innerHTML = y;
+        }
+    </script>
+</head>
+<body>
+    <main class="grid grid-row-6 grid-cols-4 w-96 mx-auto">
+        <button class="bg-slate-300 p-2" id="display"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="clr('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="disp('')"></button>
+        <button class="bg-slate-300 p-2" onclick="ans('')"></button>
+    </main>
+</body>
+</html>
